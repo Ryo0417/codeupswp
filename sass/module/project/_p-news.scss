@@ -14,10 +14,9 @@
 	@include mq('md') {
 		display: flex;
 		justify-content: center;
-		height: rem(31);
 		width: 100%;
+		height: auto;
 		align-items: center;
-		margin-top: rem(33);
 	}
 }
 
