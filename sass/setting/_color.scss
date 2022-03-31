@@ -4,6 +4,7 @@ $hover-opacity: 0.8;
 
 //汎用色
 $black: #111;
+$gray:#333;
 $white: #fff;
 $section-title: #F9F871;
 
@@ -11,4 +12,28 @@ $section-title: #F9F871;
 body {
 	background: $black;
 	color: $white;
+}
+
+//ボタンホバーアクション
+@mixin btn__hover--LtoR($backgroundColor, $fontColor) {
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: $fontColor;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $backgroundColor;
+    transition: all .3s;
+  }
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
 }

@@ -296,6 +296,39 @@ select::-ms-expand {
 	letter-spacing: 0.01em;
 }
 
+.c-btn--white {
+	background-color: #fff;
+	color: #333;
+	display: inline-block;
+	font-size: 1.25rem;
+	letter-spacing: 0.01em;
+	padding: 0 2rem;
+	position: relative;
+	z-index: 1;
+}
+
+.c-btn--white:hover {
+	color: #fff;
+}
+
+.c-btn--white::after {
+	-webkit-transition: all .3s;
+	background-color: #333;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all .3s;
+	width: 0;
+	z-index: -1;
+}
+
+.c-btn--white:hover::after {
+	left: 0;
+	width: 100%;
+}
+
 .c-cmn-txt__cont {
 	background-color: #333;
 	padding: 1.5rem 1.25rem 1.3125rem;

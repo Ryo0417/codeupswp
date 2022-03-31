@@ -29,23 +29,23 @@
 	<div class="p-news__inner">
 		<div class="p-news__cont">
 <?php
-	$args = array(
-	'posts_per_page' => 1 // 表示件数
-	);
-	$posts = get_posts($args);
-	foreach ($posts as $post): // ループの開始
-			setup_postdata($post); // 記事データの取得
-		?>
+    $args = array(
+    'posts_per_page' => 1 // 表示件数
+    );
+    $posts = get_posts($args);
+    foreach ($posts as $post): // ループの開始
+            setup_postdata($post); // 記事データの取得
+        ?>
 			<time class="p-news__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
 			<span class="p-news__label"><?php $category = get_the_category();echo $category[0]->cat_name;?></span>
 			<a href="<?php the_permalink(); ?>" class="p-news__txt"
 				><?php the_title(); ?></a
 			>
 		<?php
-			endforeach; // ループの終了
-	?>
+            endforeach; // ループの終了
+    ?>
 			<div class="p-news__btn p-news__btn--white">
-				<a href="<?php echo esc_url(home_url('/news')); ?>">すべて見る</a>
+				<a class="c-btn--white" href="<?php echo esc_url(home_url('/news')); ?>">すべて見る</a>
 			</div>
 		</div>
 	</div>
@@ -108,11 +108,11 @@
 					<div class="swiper slider2">
 
 						<?php
-						$args = [
-						'post_type' => 'works', // カスタム投稿名が「gourmet」の場合
-						'posts_per_page' => 3, // 表示する数
-						];
-						$my_query = new WP_Query($args); ?>
+                        $args = [
+                        'post_type' => 'works', // カスタム投稿名が「gourmet」の場合
+                        'posts_per_page' => 3, // 表示する数
+                        ];
+                        $my_query = new WP_Query($args); ?>
 <?php if ($my_query->have_posts()): // 投稿がある場合?>
   <div class="swiper-wrapper p-works__wrapper">
 		<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -177,13 +177,13 @@
 
 <!-- blog -->
 <?php
-	$args = array(
-		'post_type' => 'blog',
-		'posts_per_page' => 3,
-	);
-	$my_query = new WP_Query($args);
-	if ($my_query->have_posts()):
-		?>
+    $args = array(
+        'post_type' => 'blog',
+        'posts_per_page' => 3,
+    );
+    $my_query = new WP_Query($args);
+    if ($my_query->have_posts()):
+        ?>
 
 <section class="p-blog l-blog">
 	<span class="c-bg-line--bottom"></span>
