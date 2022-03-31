@@ -3427,10 +3427,13 @@ a[href^="tel:"] {
 }
 
 .p-sub-news__meta {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	height: 1.9375rem;
+	height: auto;
 }
 
 .p-sub-news__date {
