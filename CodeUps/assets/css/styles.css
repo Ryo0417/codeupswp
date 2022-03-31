@@ -510,7 +510,7 @@ select::-ms-expand {
 }
 
 .l-news {
-	margin-top: 1.6875rem;
+	margin-top: 1.5rem;
 }
 
 .l-overview {
@@ -2721,7 +2721,7 @@ a[href^="tel:"] {
 }
 
 .l-news {
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 }
 
 .l-overview {
@@ -3304,7 +3304,6 @@ a[href^="tel:"] {
 	display: flex;
 	height: 1.9375rem;
 	justify-content: center;
-	margin-top: 2.0625rem;
 	width: 100%;
 }
 

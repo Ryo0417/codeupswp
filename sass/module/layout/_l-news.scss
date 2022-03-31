@@ -1,7 +1,7 @@
 .l-news {
-	margin-top: rem(27);
+	margin-top: rem(24);
 
 	@include mq('md') {
-		margin-top: rem(24);
+		margin-top: rem(32);
 	}
 }
