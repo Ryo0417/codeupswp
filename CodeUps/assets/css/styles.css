@@ -3144,6 +3144,11 @@ a[href^="tel:"] {
 	overflow: hidden;
 }
 
+.p-data__figure img {
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
 .p-data__title {
 	margin-top: 0.75rem;
 }
