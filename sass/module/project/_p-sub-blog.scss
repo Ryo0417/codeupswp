@@ -1,0 +1,68 @@
+.p-sub-blog__inner {
+	max-width: rem(600);
+	width: 100%;
+	padding-top: rem(16);
+	overflow: hidden;
+}
+
+.p-sub-blog__top-img {
+	width: 100%;
+	height: rem(425);
+	background: url(../img/sub-blog/sp-sub-blog.jpg) no-repeat center center /cover;
+	position: relative;
+
+	@include mq('md') {
+		width: 100%;
+		height: rem(370);
+		background: url(../img/sub-blog/pc-sub-blog.jpg) no-repeat center center /cover;
+	}
+}
+
+.p-sub-blog__top-img::after {
+	content: "ブログ";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: rem(30);
+	font-weight: bold;
+	letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(36);
+		letter-spacing: 0.055em;
+	}
+}
+
+.p-sub-blog__nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: rem(85);
+
+	@include mq('md') {
+		margin-top: rem(115);
+	}
+}
+
+.p-sub-blog__link {
+	margin-right: rem(8);
+	margin-top: rem(16);
+}
+
+.p-sub-blog__link a {
+	display: inline-block;
+	padding: rem(4) rem(8);
+	letter-spacing: 0.1em;
+}
+
+.p-sub-blog__link a:hover {
+	color: #333;
+	background-color: #fff;
+}
+
+.p-sub-blog__tag {
+	color: #333;
+	background-color: #fff;
+}

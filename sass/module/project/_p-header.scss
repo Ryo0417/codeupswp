@@ -1,0 +1,43 @@
+.p-header__inner{
+	width: 100%;
+	height: inherit;
+  margin-right: auto;
+  margin-left: auto;
+	padding-left: rem(22);
+	padding-right: rem(22);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include mq('md') {
+		padding-left: rem(32);
+		padding-right: 0;
+	}
+}
+
+// MV以下透過消す
+.p-header__change-color {
+	opacity: 1;
+	background-color: #111;
+}
+
+.p-header__logo {
+	width: rem(70);
+	height: 50px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 99999;
+
+	@include mq('md') {
+		width: rem(95);
+	}
+}
+
+.p-header__logo img {
+	height: rem(40);
+	width: 100%;
+	@include mq('md') {
+		height: rem(40);
+	}
+}

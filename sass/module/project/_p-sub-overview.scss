@@ -1,0 +1,103 @@
+.p-sub-overview {
+	overflow: hidden;
+}
+
+.p-sub-overview__inner {
+	// max-width: rem(600);
+	// width: 100%;
+	margin: 0 auto;
+	padding-top: rem(16);
+	overflow: hidden;
+
+	@include mq('md') {
+		max-width: rem(1100);
+		width: 100%;
+	}
+}
+
+.p-sub-overview__top-img {
+	width: 100%;
+	height: rem(425);
+	background: url(../img/sub-overview/sp-sub-overview.jpg) no-repeat center center /cover;
+	position: relative;
+
+	@include mq('md') {
+		height: rem(370);
+		background: url(../img/sub-overview/pc-sub-overview.jpg) no-repeat center center /cover;
+	}
+}
+
+.p-sub-overview__top-img::after {
+	content: "企業概要";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: rem(30);
+	font-weight: bold;
+	letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(36);
+		letter-spacing: 0.055em;
+	}
+}
+
+.sub-overview__items {
+	margin-top: rem(85);
+	max-width: rem(600);
+	margin: auto;
+	width: 100%;
+
+	@include mq('md') {
+		margin-top: rem(120);
+		max-width: rem(1100);
+	}
+}
+
+.sub-overview__item {
+	display: flex;
+	width: 100%;
+	padding: rem(18) 0 rem(18) rem(5);
+	font-size: rem(13);
+	border-bottom: 1px solid #fff;
+
+	@include mq('md') {
+		padding: rem(28) 0;
+		font-size: rem(16);
+	}
+}
+
+.sub-overview__item dt {
+	width: rem(52);
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.sub-overview__item dd {
+	margin-left: rem(57);
+
+	@include mq('md') {
+		margin-left: rem(88);
+	}
+}
+
+.sub-overview__map {
+	@include mq('md') {
+		max-width: rem(1100);
+		width: 100%;
+	}
+}
+
+.sub-overview__map iframe {
+	margin: rem(120) calc(50% - 50vw) 0;
+	width: 100vw;
+	aspect-ratio: 375 / 300;
+
+	@include mq('md') {
+		margin: rem(80) auto 0;
+		width: 100%;
+		aspect-ratio: 1100 / 367;
+	}
+}

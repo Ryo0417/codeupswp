@@ -1,0 +1,61 @@
+.p-data {
+	position: relative;
+}
+
+.p-data__link {
+	display: block;
+}
+
+.p-data__link:hover {
+	@include mq('md') {
+		.p-data__figure img {
+		transform: scale(1.1);
+		transition: all .3s;
+		}
+
+		.p-data__title {
+			color: #F9F871;
+		}
+	}
+}
+
+.p-data__figure {
+	@include mq('md') {
+		max-width: 525px;
+		aspect-ratio: 525 / 350;
+		overflow: hidden;
+	}
+}
+
+.p-data__title {
+	margin-top: rem(24);
+	font-size: rem(20);
+	text-align: left;
+
+	@include mq('md') {
+		margin-top: rem(12);
+	}
+}
+
+.p-data__title--center {
+	text-align: center;
+}
+
+.p-data__title--left {
+	text-align: left;
+}
+
+.p-data__tag {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: rem(8) rem(20);
+	background-color: #111;
+}
+
+.p-data__head {
+	margin-top: rem(24);
+	font-size: rem(20);
+	text-align: left;
+}

@@ -1,0 +1,29 @@
+.p-thanks__body {
+	font-size: rem(20);
+	text-align: center;
+	letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(30);
+	}
+}
+
+.p-thanks__text {
+	margin-top: rem(80);
+}
+
+.p-thanks__btn a {
+	display: block;
+	padding: rem(10) 0;
+	text-align: center;
+	max-width: rem(335);
+	width: 100%;
+	margin: rem(80) auto 0;
+	background-color: #333;
+	border: 1px solid #fff;
+
+	@include mq('md') {
+		max-width: rem(360);
+		font-size: rem(16);
+	}
+}

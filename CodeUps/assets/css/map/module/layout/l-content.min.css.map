@@ -1,0 +1,1 @@
+{"version":3,"sources":["module/layout/l-content.scss","module/layout/l-content.css"],"names":[],"mappings":"AAAA,WCCC,WDAA","file":"../../../module/layout/l-content.min.css","sourcesContent":[".l-content {\n\tmargin-top: rem(100);\n}",".l-content {\n  margin-top: rem(100);\n}\n"]}

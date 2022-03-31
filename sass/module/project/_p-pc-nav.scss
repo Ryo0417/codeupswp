@@ -1,0 +1,115 @@
+.p-pc-nav {
+  height: inherit;
+	display: none;
+
+  @include mq("md") {
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-pc-nav__items {
+    height: inherit;
+    display: flex;
+}
+
+.p-pc-nav__item {
+  height: inherit;
+}
+
+.p-pc-nav__item a {
+  height: inherit;
+  font-size: rem(16);
+  letter-spacing: 0.125em;
+  display: flex;
+  align-items: center;
+	position: relative;
+	transition: ease 0.3s;
+
+	@include mq('md') {
+		padding: 0 15px;
+	}
+}
+
+.p-pc-nav__item:nth-child(n + 2){
+	// margin-left: rem(32);
+}
+
+.p-pc-nav__item a:hover {
+	opacity: .7;
+}
+
+.p-pc-nav__item:not(:last-of-type) a::after {
+	content: "";
+	position: absolute;
+	bottom: rem(8);
+	left: rem(15);
+	width: 0;
+	height: rem(1);
+	background-color: #FFEA2E;
+	transition: ease 0.3s;
+}
+
+.p-pc-nav__item:not(:last-of-type) a:hover:after {
+	width: calc(100% - #{rem(15 * 2)});
+}
+
+// .p-pc-nav__item.p-pc-nav__item--white a::after {
+// 	visibility: hidden; //下線出さない
+// }
+
+.p-pc-nav__item.p-pc-nav__item--white {
+	margin-left: rem(16);
+	transition: all 0.3s ease 0s;
+	max-width: rem(172);
+	width: 100%;
+	position: relative;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a {
+	display: flex;
+	align-items: center;
+	color: #333;
+	background-color: $white;
+	padding: 0 rem(32);
+	position: relative;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#333;
+	}
+
+	.p-pc-nav__item.p-pc-nav__item--white a:hover span {
+		color:$white;
+	}
+
+.p-pc-nav__item.p-pc-nav__item--white a:hover {
+	color: $white;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a::before {
+	content: '';
+	/*絶対配置で位置を指定*/
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+	/*色や形状*/
+background:#333;/*背景色*/
+width: 100%;
+height: 100%;
+	/*アニメーション*/
+transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+transform: scale(0, 1);
+transform-origin: right top;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a:hover:before {
+	@include mq('md') {
+		transform-origin: left top;
+		transform: scale(1, 1);
+	}
+}

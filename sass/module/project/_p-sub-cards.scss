@@ -1,0 +1,5 @@
+.p-sub-cards {
+	@include mq('md') {
+		display: flex; 
+	}
+}

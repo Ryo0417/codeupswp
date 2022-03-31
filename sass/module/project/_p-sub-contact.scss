@@ -1,0 +1,189 @@
+.p-sub-contact {
+	overflow: hidden;
+}
+
+.p-sub-contact__breadcrumb {
+	margin-top: rem(16);
+	padding-left: rem(20);
+
+	@include mq('md') {
+		margin-left: rem(90);
+	}
+}
+
+.p-sub-contact__inner.l-inner {
+  max-width: rem(1150);
+  width: 100%;
+  padding-top: rem(16);
+  overflow: hidden;
+}
+
+.p-sub-contact__top-img {
+  width: 100%;
+  background: url(../img/sub-contact/sub-contact-sp.jpg) no-repeat center center /
+    cover;
+  height: rem(425);
+  position: relative;
+  white-space: nowrap;
+
+	@include mq('md') {
+		background: url(../img/sub-contact/sub-contact-pc.jpg) no-repeat center center /cover;
+		height: rem(370);
+	}
+}
+
+.p-sub-contact__top-img::after {
+  content: "お問い合わせ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: rem(30);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(36);
+		letter-spacing: 0.055em;
+	}
+}
+
+.wpcf7-form.invalid {
+  margin-top: rem(16);
+}
+
+.wpcf7-form {
+  margin: rem(85) auto 0;
+	max-width: rem(600);
+
+  @include mq("md") {
+		max-width: rem(860);
+    width: 100%;
+    display: block;
+		margin: rem(115) auto 0;
+  }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+}
+
+.wpcf7-form-control {
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  height: rem(45);
+  font-size: rem(14);
+  padding-left: rem(9);
+  margin-top: rem(16);
+
+	@include mq('md') {
+		height: rem(40);
+		padding-left: rem(16);
+		margin-top: 0;
+	}
+}
+
+.your-message textarea {
+  min-height: rem(250);
+  padding-top: rem(7);
+}
+
+.wpcf7-not-valid {
+  background-color: #ffdcdc;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  border-color: transparent;
+  color: #ff5757;
+  text-align: center;
+  letter-spacing: 0.125em;
+}
+
+
+table.CF7_table {
+  width: 100%;
+}
+.CF7_table tr,
+.CF7_table td,
+.CF7_table th {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  text-align: left;
+	font-size: rem(14);
+}
+
+
+.CF7_table tr:not(:first-child) {
+	margin-top: rem(32);
+}
+
+.CF7_table tr {
+	@include mq('md') {
+		display: flex;
+		align-items: start;
+	}
+}
+
+.CF7_table th {
+	@include mq('md') {
+		width: rem(132);
+		text-align: right;
+		margin-top: rem(9);
+	}
+}
+
+.CF7_table td {
+	@include mq('md') {
+		max-width: rem(540);
+		width: 100%;
+		margin-left: rem(24);
+	}
+}
+
+.wpcf7-submit {
+	font-size: rem(20);
+  letter-spacing: 0.1em;
+	margin-top: 0;
+
+	@include mq('md') {
+		max-width: rem(360);
+		width: 100%;
+		margin: auto;
+		padding-left: rem(3) 0;
+		text-align: center;
+		font-size: rem(16);
+	}
+}
+
+.sub-contact__btn {
+	margin: rem(48) auto 0;
+	max-width: rem(360);
+	width: 100%;
+
+	@include mq('md') {
+		margin: rem(56) auto 0;
+	}
+}
+
+.sub-contact__btn input {
+	transition: all 0.3s;
+	color: #000;
+}
+
+.sub-contact__btn input:hover {
+	@include mq('md') {
+		color: $white;
+		background-color: #333;
+		border: 1px solid #fff;
+	}
+}
+
+::placeholder{
+  color:#979797
+}
+

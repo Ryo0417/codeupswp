@@ -1,0 +1,45 @@
+.p-recommend__inner {
+	max-width: rem(600);
+	width: 100%;
+}
+
+.p-recommend__article {
+	text-align: center;
+	letter-spacing: 0.125em;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	padding-top: rem(9);
+	padding-bottom: rem(10);
+
+	@include mq('md') {
+		max-width: rem(1100);
+		background-color: #333;
+	}
+}
+
+.p-recommend__lists {
+	margin-top: rem(32);
+
+	@include mq('md') {
+		margin-top: rem(80);
+		display: flex;
+	}
+}
+
+.p-recommend__list:not(:first-child) {
+	margin-top: rem(24);
+
+	@include mq('md') {
+		margin-top: 0;
+		margin-left: rem(32);
+	}
+}
+
+.p-recommend__body {
+	margin-top: rem(32);
+}
+
+.p-recommend__meta:not(:first-child) {
+	margin-top: rem(32);
+}
+

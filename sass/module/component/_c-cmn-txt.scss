@@ -1,0 +1,91 @@
+.c-cmn-txt {
+  @include mq("md") {
+    padding: rem(114) 0;
+  }
+}
+
+.c-cmn-txt__cont {
+  padding: rem(24) rem(20) rem(21);
+  background-color: #333;
+
+  @include mq("md") {
+    max-width: rem(510);
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.c-cmn-txt__title {
+  font-size: rem(20);
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(25);
+    letter-spacing: 0.02em;
+    text-align-last: left;
+  }
+}
+
+.c-cmn-txt__desc {
+  font-size: rem(16);
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  margin-top: rem(26);
+
+  @include mq("md") {
+    letter-spacing: 0.031em;
+    margin-top: rem(29);
+    line-height: 2.1875;
+  }
+}
+
+.c-cmn-txt__btn {
+  margin: 0 auto;
+
+  @include mq("md") {
+    margin: 0;
+  }
+}
+
+.c-cmn-txt__btn a {
+  display: block;
+  font-size: rem(20);
+  letter-spacing: 0.1em;
+  position: relative;
+
+  @include mq("md") {
+    font-size: rem(16);
+    z-index: 1;
+  }
+}
+
+.c-cmn-txt__btn--grey a:hover {
+  @include mq("md") {
+    color: #333;
+  }
+}
+
+.c-cmn-txt__btn--grey a::before {
+  @include mq("md") {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    content: "";
+    background: $white;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+  }
+}
+
+.c-cmn-txt__btn--grey a:hover::before {
+  @include mq("md") {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+}

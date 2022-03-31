@@ -1,0 +1,65 @@
+.c-wp-pagenavi {
+	margin-top: rem(80);
+	text-align: center;
+}
+
+.c-wp-pagenavi--wide {
+	margin-top: rem(104);
+}
+
+.current {
+	color: #333;
+	background-color: #fff;
+}
+
+.wp-pagenavi .previouspostslink {/* 記号の削除 */
+    display: inline-block;
+
+		@include mq('md') {
+			padding: 0 rem(12);
+		}
+}
+
+.pages {
+	display: none;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	margin-left: rem(16);
+
+	@include mq('md') {
+		margin-left: rem(12);
+	}
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span:hover {
+	color: #333;
+	background-color: #fff;
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi .smaller,
+.wp-pagenavi .larger {
+	padding: rem(2) rem(7);
+}
+
+
+.wp-pagenavi .previouspostslink {
+	margin-left: 0;
+	margin-right: rem(8);
+
+	@include mq('md') {
+		padding: 0 rem(12);
+		letter-spacing: 0.125em;
+		margin-right: rem(15);
+	}
+}
+
+.wp-pagenavi .nextpostslink {
+	margin-left: rem(24);
+
+	@include mq('md') {
+		padding: 0 rem(12);
+		letter-spacing: 0.125em;
+	}
+}

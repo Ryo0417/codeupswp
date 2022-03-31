@@ -1,0 +1,12 @@
+/* FontFamily */
+$base-font-family: "Noto Sans JP";
+$second-font-family: "Noto Serif JP";
+
+body {
+  font-family: $base-font-family;
+}
+
+/* font-weight */
+$regular: 300;
+$normal: 400;
+$bold: 700;

@@ -1,0 +1,107 @@
+.p-sub-works__inner {
+	// max-width: rem(600);
+	width: 100%;
+	padding-top: rem(16);
+	overflow: hidden;
+}
+
+.p-sub-works__top-img {
+	width: 100%;
+	height: rem(425);
+	background: url(../img/sub-works/sp-sub-work-mv.jpg) no-repeat center center /cover;
+	position: relative;
+
+	@include mq('md') {
+		height: rem(370);
+		background: url(../img/sub-works/pc-sub-work-mv.jpg) no-repeat center center /cover;
+	}
+}
+
+.p-sub-works__top-img::after {
+	content: "制作実績";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: rem(30);
+	font-weight: bold;
+	letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(36);
+		letter-spacing: 0.055em;
+	}
+}
+
+.p-sub-works__nav {
+	margin-top: rem(85);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.p-sub-works__link {
+	margin-right: rem(8);
+	margin-top: rem(16);
+
+	@include mq('md') {
+		margin-right: rem(40);
+	}
+}
+
+.p-sub-works__link a {
+	display: inline-block;
+	padding: rem(4) rem(8);
+	letter-spacing: 0.1em;
+}
+
+.p-sub-works__link a:hover {
+	color: #333;
+	background-color: #fff;
+}
+
+.p-sub-works__tag {
+	color: #333;
+	background-color: #fff;
+}
+
+.p-sub-works__lists {
+	margin-top: rem(20);
+
+	@include mq('md') {
+		margin-top: rem(40);
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.p-sub-works__list {
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+
+	@include mq('md') {
+		margin: initial;
+		width: calc(50% - #{rem(48)} / 2);
+	}
+}
+
+.p-sub-works__list + .p-sub-works__list {
+	margin-top: rem(48);
+
+	@include mq('md') {
+		margin-top: 0;
+	}
+}
+
+.p-sub-works__list:nth-child(2n) {
+	@include mq('md') {
+		margin-left: rem(48);
+	}
+}
+
+.p-sub-works__list:nth-child(n + 3) {
+	@include mq('md') {
+		margin-top: rem(114);
+	}
+}

@@ -1,0 +1,133 @@
+.p-sub-content__inner {
+	max-width: rem(600);
+	width: 100%;
+	padding-top: rem(16);
+	overflow: hidden;
+
+	@include mq('md') {
+		max-width: rem(1100);
+		width: 100%;
+	}
+}
+
+.p-sub-content__top-img {
+	width: 100%;
+	height: rem(425);
+	background: url(../img/sub-content/sp-sub-content1.jpg) no-repeat center center /cover;
+	position: relative;
+
+	@include mq('md') {
+		background: url(../img/sub-content/pc-sub-content1.jpg) no-repeat center center /cover;
+		height: rem(370);
+	}
+}
+
+.p-sub-content__top-img::after {
+	content: "事業内容";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: rem(30);
+	font-weight: bold;
+	letter-spacing: 0.1em;
+
+	@include mq('md') {
+		font-size: rem(36);
+		letter-spacing: 0.055em;
+	}
+}
+
+.p-sub-content__head {
+	margin-top: rem(69);
+	font-size: rem(20);
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.p-sub-content__desc {
+	margin-top: rem(24);
+	letter-spacing: 0.125em;
+
+	@include mq('md') {
+		text-align: center;
+	}
+}
+
+.p-sub-content__list {
+	margin-top: rem(80);
+
+	@include mq('md') {
+		display: flex;
+	}
+}
+
+.p-sub-content__list.even {
+	@include mq('md') {
+		flex-direction: row-reverse;
+	}
+}
+
+.p-sub-content__img {
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+
+	@include mq('md') {
+		margin: 0;
+		max-width: rem(550);
+		width: 100%;
+	}
+}
+
+.p-sub-content__img img {
+	height: auto;
+}
+
+.p-sub-content__img:not(:first-child) {
+	margin-top: rem(48);
+}
+
+.p-sub-content__body {
+	@include mq('md') {
+		max-width: rem(510);
+		width: 100%;
+	}
+}
+
+.p-sub-content__body.odd {
+	@include mq('md') {
+		margin-left: rem(30);
+	}
+}
+
+.p-sub-content__body.even {
+	@include mq('md') {
+		margin-right: rem(30);
+	}
+}
+
+.p-sub-content__title {
+	margin-top: rem(24);
+	font-size: rem(20);
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(10);
+		font-size: rem(25);
+		text-align: left;
+	}
+}
+
+.p-sub-content__text {
+	margin-top: rem(24);
+	letter-spacing: 0.125em;
+
+	@include mq('md') {
+		letter-spacing: 0.03125em;
+		line-height: 2.1875;
+	}
+}

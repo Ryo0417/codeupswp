@@ -1,0 +1,119 @@
+.swiper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+/* ラッパー */
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  transition-timing-function: ease-in;
+}
+
+.slider1 {
+  opacity: 0.5;
+}
+
+/* スライド */
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+/* 背景画像のスタイルの設定 */
+.bg-slide-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-slide-image img {
+  display: block;
+}
+
+.pc-slide-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// ズームイン
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.swiper-slide-active .bg-slide-image,
+.swiper-slide-duplicate-active .bg-slide-image,
+.swiper-slide-prev .bg-slide-image {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+.swiper-slide-active .pc-slide-image,
+.swiper-slide-duplicate-active .pc-slide-image,
+.swiper-slide-prev .pc-slide-image {
+  animation: zoomUp 10s linear 0s 1 normal both;
+}
+
+/* スライドさせるコンテンツのスタイル（絶対配置）*/
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+
+  @include mq('md') {
+  }
+}
+
+.slide-content__head h2 {
+  font-size: rem(36);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0.01786em;
+
+  @include mq('md') {
+    font-size: rem(80);
+    letter-spacing: 0.01em;
+  }
+}
+
+.slide-content__txt {
+  font-size: rem(20);
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  margin-top: rem(24);
+
+  @include mq('md') {
+    font-size: rem(32);
+    letter-spacing: 0.2em;
+    margin-top: rem(24);
+  }
+}

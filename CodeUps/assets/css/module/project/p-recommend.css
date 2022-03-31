@@ -1,0 +1,23 @@
+.p-recommend__article {
+	border: 1px solid #fff;
+	letter-spacing: 0.125em;
+	margin: 0 auto;
+	max-width: rem(600);
+	padding-bottom: rem(10);
+	padding-top: rem(9);
+	text-align: center;
+	width: 100%;
+}
+
+.p-recommend__list {
+	margin-top: rem(32);
+}
+
+.p-recommend__body {
+	margin-top: rem(32);
+}
+
+.p-recommend__meta:not(:first-child) {
+	margin-top: rem(32);
+}
+

@@ -1,0 +1,163 @@
+.p-card {
+  display: block;
+  background-color: $white;
+  max-width: rem(600);
+  width: 100%;
+  // transition: all 0.3s;
+
+  @include mq("md") {
+    max-width: calc(33.33333% - 25px * 2 / 3);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.p-card--new {
+  position: relative;
+}
+
+.p-card--new::before {
+  content: "";
+  position: absolute;
+  top: rem(-17);
+  left: rem(-17);
+  z-index: 1;
+  background-color: #ffba6a;
+  border-radius: 50%;
+  width: rem(60);
+  height: rem(60);
+  text-align: center;
+
+  @include mq("md") {
+    top: rem(-20);
+    left: rem(-18);
+  }
+}
+
+.p-card--new::after {
+  content: "New";
+  position: absolute;
+  top: 0;
+  left: rem(-5);
+  z-index: 2;
+  font-size: rem(16);
+  letter-spacing: 0.125em;
+  color: #333;
+
+  @include mq("md") {
+    top: rem(-2);
+    left: rem(-5);
+  }
+}
+
+.p-card:hover {
+  @include mq("md") {
+    background-color: #333;
+    .p-card__txtbox {
+      background-color: #333;
+      color: $white;
+    }
+    .p-card__time {
+      background-color: #333;
+      color: $white;
+    }
+    .p-card__img img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.p-card__img {
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+
+.p-card__img::before {
+  content: "";
+  display: block;
+  padding-top: 66.57143%;
+
+  @include mq("md") {
+  }
+}
+
+.p-card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.p-card__txtbox {
+  padding: rem(3) rem(23) 0;
+  color: #333;
+}
+
+.p-card__desc {
+  @include mq("md") {
+    margin-top: auto;
+  }
+}
+
+.p-card__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(24) rem(16);
+  margin-top: rem(5);
+
+  @include mq("md") {
+    margin-top: auto;
+  }
+}
+
+.p-card__category {
+  background-color: #ffea2e;
+  color: #000;
+  text-align: center;
+  padding: 0 rem(5);
+  font-size: rem(14);
+  display: flex;
+  align-items: center;
+
+  @include mq("md") {
+  }
+}
+
+.p-card__title {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: 1.944;
+  letter-spacing: 0.055em;
+}
+
+.p-card__desc {
+  font-size: rem(14);
+  line-height: 1.857;
+  letter-spacing: 0.071em;
+  margin-top: rem(4);
+
+  @include mq("md") {
+    margin-top: rem(6);
+    margin-bottom: rem(11);
+  }
+}
+
+.p-card__time {
+  display: block;
+  font-size: rem(14);
+  line-height: 1.857;
+  letter-spacing: 0.071em;
+  color: #333;
+  // text-align: right;
+  // margin-top: rem(7);
+
+  @include mq("md") {
+    // margin-top: rem(9);
+  }
+}

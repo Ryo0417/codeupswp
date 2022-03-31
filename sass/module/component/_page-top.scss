@@ -1,0 +1,42 @@
+.page-top {
+	display: block;
+	position: fixed;
+	z-index: 9999;
+	bottom: rem(40);
+	right: rem(20);
+	background-color: $white;
+	display: block;
+	width: rem(45);
+	height: rem(45);
+
+	@include mq('md') {
+		bottom: rem(38);
+		right: rem(32);
+	}
+}
+
+.page-top span {
+	display: block;
+	position: relative;
+}
+
+.page-top span::before {
+	content: "";
+	position: absolute;
+	top: rem(17);
+	left: rem(12);
+	border-top: 2px solid #333;
+	border-right: 2px solid #333;
+	width: rem(20);
+	height: rem(20);
+	transform: rotate(-45deg);
+}
+
+.page-top span.is-hover::before {
+	border-top-color: $white;
+	border-right-color: $white;
+}
+
+.page-top.is-hover {
+	background-color: #333;
+}
