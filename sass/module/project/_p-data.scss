@@ -27,6 +27,12 @@
 	}
 }
 
+.p-data__figure img {
+	@include mq('md') {
+		transition: all .3s;
+	}
+}
+
 .p-data__title {
 	margin-top: rem(24);
 	font-size: rem(20);
