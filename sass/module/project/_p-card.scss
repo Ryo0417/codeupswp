@@ -3,13 +3,13 @@
   background-color: $white;
   max-width: rem(600);
   width: 100%;
-  // transition: all 0.3s;
 
   @include mq("md") {
     max-width: calc(33.33333% - 25px * 2 / 3);
     width: 100%;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s;
   }
 }
 
@@ -55,11 +55,9 @@
   @include mq("md") {
     background-color: #333;
     .p-card__txtbox {
-      background-color: #333;
       color: $white;
     }
     .p-card__time {
-      background-color: #333;
       color: $white;
     }
     .p-card__img img {
@@ -71,7 +69,7 @@
 .p-card__img {
   position: relative;
   width: 100%;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
   overflow: hidden;
 }
 
