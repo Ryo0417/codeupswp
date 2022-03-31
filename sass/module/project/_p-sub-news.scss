@@ -57,7 +57,8 @@
 .p-sub-news__meta {
 	@include mq('md') {
 		display: flex;
-		height: rem(31);
+		align-items: center;
+		height: auto;
 	}
 }
 
