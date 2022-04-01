@@ -2969,7 +2969,6 @@ a[href^="tel:"] {
 	display: -ms-flexbox;
 	display: flex;
 	height: auto;
-	height: auto;
 	justify-content: center;
 	width: 100%;
 }
