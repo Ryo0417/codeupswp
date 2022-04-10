@@ -35,7 +35,7 @@
 /* 背景画像のスタイルの設定 */
 .bg-slide-image {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 
 .pc-slide-image {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -91,7 +91,12 @@
   }
 }
 
-.slide-content__head h2 {
+.slide-content__title {
+  overflow: hidden;
+}
+
+.slide-content__sentence {
+  display: inline-block;
   font-size: rem(36);
   font-weight: bold;
   font-style: italic;
@@ -116,4 +121,12 @@
     letter-spacing: 0.2em;
     margin-top: rem(24);
   }
+}
+
+.firstview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
