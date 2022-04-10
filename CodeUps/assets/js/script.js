@@ -213,3 +213,14 @@ var thumbs = new Swiper ('.gallery-thumbs', {
 slider.controller.control = thumbs;
 thumbs.controller.control = slider;
 
+
+// GSAP
+// TweenMax.fromTo('.swiper-wrapper', 1, {height: 0}, {height:'100vh'});
+
+// TweenMax.staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut, delay: 1.2}, 0.05);
+
+tl = new TimelineMax();
+tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
+.addLabel('up')
+.staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut}, 0.05, 'up+=0.2')
+.fromTo('.slide-content__txt', 1, {opacity:0, y: '100%'}, {opacity: 1, y: '0%'}, 'up+=1.2');

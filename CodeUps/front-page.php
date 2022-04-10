@@ -2,7 +2,7 @@
 
 <!-- スライダーのメインコンテナの div 要素（必須） -->
 <div class="firstview swiper slider1">
-	<div class="swiper-wrapper">
+	<div class="swiper-wrapper js-swiper-wrapper">
 		<div class="swiper-slide">
 			<div class="bg-slide-image u-mobile" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/common/sp-mv1.jpg)"></div>
 			<div class="pc-slide-image u-desktop" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/common/pc-mv1.jpg)"></div>
@@ -19,7 +19,20 @@
 </div>
 <div class="slide-content">
 	<div class="slide-content__head">
-		<h2>Web Creative</h2>
+		<h2 class="slide-content__title">
+			<span class="slide-content__sentence">W</span>
+			<span class="slide-content__sentence">e</span>
+			<span class="slide-content__sentence">b</span>
+			<span class="slide-content__sentence">&nbsp</span>
+			<span class="slide-content__sentence">C</span>
+			<span class="slide-content__sentence">r</span>
+			<span class="slide-content__sentence">e</span>
+			<span class="slide-content__sentence">a</span>
+			<span class="slide-content__sentence">t</span>
+			<span class="slide-content__sentence">i</span>
+			<span class="slide-content__sentence">v</span>
+			<span class="slide-content__sentence">e</span>
+		</h2>
 		<p class="slide-content__txt">想いをカタチに</p>
 	</div>
 </div>
