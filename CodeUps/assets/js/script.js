@@ -224,3 +224,43 @@ tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
 .addLabel('up')
 .staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut}, 0.05, 'up+=0.2')
 .fromTo('.slide-content__txt', 1, {opacity:0, y: '100%'}, {opacity: 1, y: '0%'}, 'up+=1.2');
+
+// scrolltrigger
+gsap.registerPlugin(ScrollTrigger);
+// 事業内容アニメーション
+jQuery(function ($) {
+  $(window).on('load', function() {
+    var $window = $(this).width();
+    var bp = 767;
+    if ($window > bp) {
+      gsap.set(".p-content__img", {opacity:0,x: 100}); //初期状態をセット
+      gsap.to('.p-content__img', {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: '.p-content__imgbox',
+          start: 'top center'
+        },
+        stagger: {
+          from: "start", //左からアニメーション start、center、edges、random、endが指定できる
+          amount: 1 //1秒ズラしてアニメーション
+            }
+      });
+    }
+    else {
+      gsap.set(".p-content__img", {opacity:0,y: 100}); //初期状態をセット
+      gsap.to('.p-content__img', {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: '.p-content__imgbox',
+          start: 'top bottom'
+        },
+        stagger: {
+          from: "start", //左からアニメーション start、center、edges、random、endが指定できる
+          amount: 1 //1秒ズラしてアニメーション
+            }
+      });
+    }
+  });
+});
