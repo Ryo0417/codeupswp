@@ -33,7 +33,11 @@
   location = 'https://codeups.local/contact/thanks/';
   }, false );
 </script>
+<!-- gsap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+<!-- scrolltrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
