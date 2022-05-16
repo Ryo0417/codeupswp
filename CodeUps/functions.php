@@ -34,6 +34,7 @@ add_action( 'after_setup_theme', 'my_setup' );
  */
 function my_script_init()
 {
+	wp_deregister_script( 'jquery'); //デフォルトの jQuery は読み込まない
 	/* swiper.css読み込み */
 	wp_enqueue_style(
 		'swiper_css',
@@ -46,6 +47,16 @@ function my_script_init()
 		wp_enqueue_script(
 			'swiper_js',
 			'https://unpkg.com/swiper@7/swiper-bundle.min.js'
+		);
+
+		/* gsap読み込み */
+		wp_enqueue_script(
+			'gsap_js',
+			'//cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js'
+		);
+		wp_enqueue_script(
+			'scrolltrigger_js',
+			'//cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js'
 		);
 
 		wp_enqueue_script(
