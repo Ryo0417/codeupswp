@@ -68,36 +68,42 @@
 
 
 <!-- content -->
-	<section class="p-content l-content">
+	<section class="p-content l-content js-content">
 		<span class="c-bg-line--top"></span>
 		<div class="p-content__inner">
-			<div class="p-content__head">
-				<h2>事業内容</h2>
+			<div class="p-content__head js-content-head">
+				<h2>
+					<div class="p-content__maskWrapper">
+
+						<div class="p-content__mask c-mask js-mask"></div>
+						<span>事業内容</span>
+					</div>
+				</h2>
 			</div>
 			<div class="p-content__imgboxs">
-				<ul class="p-content__imgbox">
-					<li class="p-content__img">
+				<ul class="p-content__imgbox js-content-imgbox">
+					<li class="p-content__img js-content-img">
 						<a class="p-content__link" href="<?php echo esc_url(home_url('/content/#p-sub-content0')); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/content1.jpg" alt="経営理念ページへ" />
 							<span>経営理念ページへ</span>
 							<p class="p-content__hovermask u-desktop"></p> <!-- マスク -->
 						</a>
 					</li>
-					<li class="p-content__img">
+					<li class="p-content__img js-content-img">
 						<a class="p-content__link" href="<?php echo esc_url(home_url('/content/#p-sub-content1')); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/content2.jpg" alt="理念1へ" />
 							<span>理念1へ</span>
 							<p class="p-content__hovermask u-desktop"></p> <!-- マスク -->
 						</a>
 					</li>
-					<li class="p-content__img">
+					<li class="p-content__img js-content-img">
 						<a class="p-content__link" href="<?php echo esc_url(home_url('/content/#p-sub-content2')); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/content3.jpg" alt="理念2へ" />
 							<span>理念2へ</span>
 							<p class="p-content__hovermask u-desktop"></p> <!-- マスク -->
 						</a>
 					</li>
-					<li class="p-content__img">
+					<li class="p-content__img js-content-img">
 						<a class="p-content__link" href="<?php echo esc_url(home_url('/content/#p-sub-content3')); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/content4.jpg" alt="理念3へ" />
 							<span>理念3へ</span>

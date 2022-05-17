@@ -219,6 +219,7 @@ thumbs.controller.control = slider;
 
 // TweenMax.staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut, delay: 1.2}, 0.05);
 
+// mv
 tl = new TimelineMax();
 tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
 .addLabel('up')
@@ -226,18 +227,37 @@ tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
 .fromTo('.slide-content__txt', 1, {opacity:0, y: '100%'}, {opacity: 1, y: '0%'}, 'up+=1.2');
 
 // scrolltrigger
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+// 共通タイトル
+var custom_anime = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".js-content", //アニメーションが始まるトリガーとなる要素
+    start: "top bottom",
+  }
+});
+
+/*---1つ目の要素---*/
+custom_anime.to('.js-mask', //アニメーションする要素
+  {duration: 1, x: "101%", opacity:1, ease: Power2.easeInOut}
+);
+
+/*---２つ目の要素---*/
+custom_anime.to('.p-content__maskWrapper span', //アニメーションする要素
+  { duration: 1, opacity: 1}
+);
+
 // 事業内容アニメーション
   (window).addEventListener('load', function() {
     const $window = $(this).width();
     const bp = 767;
     if ($window > bp) {
-      gsap.set('.p-content__img', {opacity:0,x: 100}); //初期状態をセット
-      gsap.to('.p-content__img', {
+      gsap.set('.js-content-img', {opacity:0,x: 100}); //初期状態をセット
+      gsap.to('.js-content-img', {
         opacity: 1,
         x: 0,
+        delay: 0.5,
         scrollTrigger: {
-          trigger: '.p-content__imgbox',
+          trigger: '.js-content',
           start: 'top center'
         },
         stagger: {
@@ -247,12 +267,13 @@ tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
       });
     }
     else {
-      gsap.set('.p-content__img', {opacity:0,y: 100}); //初期状態をセット
-      gsap.to('.p-content__img', {
+      gsap.set('.js-content-img', {opacity:0,y: 100}); //初期状態をセット
+      gsap.to('.js-content-img', {
         opacity: 1,
         y: 0,
+        delay: 1,
         scrollTrigger: {
-          trigger: '.p-content__imgbox',
+          trigger: '.js-content',
           start: 'top bottom'
         },
         stagger: {
