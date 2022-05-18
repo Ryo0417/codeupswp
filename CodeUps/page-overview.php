@@ -1,7 +1,16 @@
 <?php get_header(); ?>
+
+<!-- ローディング -->
+<div class="c-splash">
+	<figure class="c-splash__logo">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/CodeUps.svg" alt="ロゴ">
+	</figure>
+</div>
+<div class="c-splash__bg"></div><!---画面遷移用-->
+
 <section class="p-sub-overview">
 	<h1 class="p-sub-overview__top-img firstview"></h1>
-	<div class="p-sub-overview__inner l-inner">
+	<div class="p-sub-overview__inner l-inner js-sub-overview">
 		<!-- breadcrumb -->
 		<div class="c-breadcrumb">
 			<?php

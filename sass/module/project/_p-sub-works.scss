@@ -1,3 +1,26 @@
+/*画面遷移の後現れるコンテンツ設定*/
+.p-sub-works{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .p-sub-works{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
 .p-sub-works__inner {
 	// max-width: rem(600);
 	width: 100%;
