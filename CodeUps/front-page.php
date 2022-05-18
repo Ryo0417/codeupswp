@@ -64,18 +64,14 @@
 	</div>
 </section>
 
-
-
-
 <!-- content -->
 	<section class="p-content l-content js-content">
 		<span class="c-bg-line--top"></span>
 		<div class="p-content__inner">
 			<div class="p-content__head js-content-head">
 				<h2>
-					<div class="p-content__maskWrapper">
-
-						<div class="p-content__mask c-mask js-mask"></div>
+					<div class="p-content__maskWrapper js-content-maskWrapper">
+						<div class="p-content__mask c-mask js-content-mask"></div>
 						<span>事業内容</span>
 					</div>
 				</h2>
@@ -116,13 +112,18 @@
 	</section>
 
 <!-- works -->
-<section class="p-works l-works">
+<section class="p-works l-works js-works">
 	<div class="p-works__inner">
-		<div class="p-works__head">
-			<h2>制作実績</h2>
+		<div class="p-works__head js-works__head">
+		<h2>
+			<div class="p-works__maskWrapper js-works-maskWrapper">
+				<div class="p-works__mask c-mask js-works-mask"></div>
+				<span>制作実績</span>
+			</div>
+		</h2>
 		</div>
 		<div class="p-works__bg">
-			<div class="p-works__body">
+			<div class="p-works__body js-works-body">
 				<div class="p-works__cont">
 					<div class="swiper slider2">
 
@@ -136,7 +137,7 @@
   <div class="swiper-wrapper p-works__wrapper">
 		<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 		<!-- ▽ ループ開始 ▽ -->
-		<div class="swiper-slide p-works__slide">
+		<div class="swiper-slide p-works__slide js-works-slide">
 			<img 
 				src="<?php echo get_field('works_image'); ?>" 
 				alt="<?php the_title(); ?>"
@@ -153,8 +154,8 @@
 				</div>
 				<div class="p-works__txtbox c-cmn-txt">
 					<div class="c-cmn-txt__cont">
-						<div class="c-cmn-txt__title">メインタイトルが入ります。</div>
-						<p class="c-cmn-txt__desc">
+						<div class="c-cmn-txt__title js-works-txt-title">メインタイトルが入ります。</div>
+						<p class="c-cmn-txt__desc js-works-txt-desc">
 							テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 						</p>
 						<div class="p-works__btn c-cmn-txt__btn c-cmn-txt__btn--grey">
@@ -168,20 +169,25 @@
 </section>
 
 <!-- overview -->
-<section class="p-overview l-overview">
+<section class="p-overview l-overview js-overview">
 	<div class="p-overview__inner">
 		<div class="p-overview__head">
-			<h2>企業概要</h2>
+		<h2>
+			<div class="p-overview__maskWrapper js-overview-maskWrapper">
+				<div class="p-overview__mask c-mask js-overview-mask"></div>
+				<span>企業概要</span>
+			</div>
+		</h2>
 		</div>
 		<div class="p-overview__bg">
-			<div class="p-overview__wrapper">
-				<div class="p-overview__img">
+			<div class="p-overview__wrapper js-overview-wrapper">
+				<div class="p-overview__img js-overview-img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/overview.jpg" alt="企業概要" />
 				</div>
 				<div class="p-overview__txtbox c-cmn-txt">
 					<div class="c-cmn-txt__cont">
-						<div class="c-cmn-txt__title">メインタイトルが入ります。</div>
-						<p class="c-cmn-txt__desc">
+						<div class="c-cmn-txt__title js-overview-txt-title">メインタイトルが入ります。</div>
+						<p class="c-cmn-txt__desc js-overview-txt-desc">
 							テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 						</p>
 						<div class="p-overview__btn c-cmn-txt__btn c-cmn-txt__btn--grey">
@@ -204,16 +210,21 @@
     if ($my_query->have_posts()):
         ?>
 
-<section class="p-blog l-blog">
+<section class="p-blog l-blog js-blog">
 	<span class="c-bg-line--bottom"></span>
 	<div class="p-blog__inner l-inner">
 		<div class="p-blog__head">
-			<h2>ブログ</h2>
+		<h2>
+			<div class="p-blog__maskWrapper js-blog-maskWrapper">
+				<div class="p-blog__mask c-mask js-blog-mask"></div>
+				<span>ブログ</span>
+			</div>
+		</h2>
 		</div>
-		<div class="p-blog__item p-cards">
+		<div class="p-blog__item p-cards js-cards">
 			<?php while ($my_query->have_posts()): $my_query->the_post();$counter++; ?>
 				<?php if ($counter <= 1): ?>
-			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card p-card--new">
+			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card p-card--new js-card--<?php echo esc_html($counter) ?>">
 				<div class="p-card__img">
 					<img src="<?php echo get_field('blog_image'); ?>" alt="<?php the_title(); ?>" />
 				</div>
@@ -228,7 +239,7 @@
 			</a>
 
 <?php else:?>
-			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card">
+			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card js-card--<?php echo esc_html($counter) ?>">
 				<div class="p-card__img">
 					<img src="<?php echo get_field('blog_image'); ?>" alt="<?php the_title(); ?>" />
 				</div>
