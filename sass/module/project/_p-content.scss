@@ -26,7 +26,8 @@
   font-size: rem(20);
   font-weight: normal;
   letter-spacing: 0.1em;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   @include mq("md") {
     font-size: rem(30);
