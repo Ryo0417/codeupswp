@@ -5,7 +5,7 @@
 
 // mv
 tl = new TimelineMax();
-tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
+tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh',delay: 2.9})
 .addLabel('up')
 .staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut}, 0.05, 'up+=0.2')
 .fromTo('.slide-content__txt', 1, {opacity:0, y: '100%'}, {opacity: 1, y: '0%'}, 'up+=1.2');
@@ -224,3 +224,123 @@ ScrollTrigger.matchMedia({
 		});
 	}
 });
+
+// お知らせ一覧ページ
+gsap.fromTo('.js-sub-news',
+{
+	autoAlpha: 0,
+	y: 50
+},
+
+{
+	autoAlpha: 1,
+	y: 0,
+	delay: 2.5,
+	duration: 1
+}
+);
+
+// お知らせ詳細ページ
+gsap.fromTo('.js-single-news',
+{
+	autoAlpha: 0,
+	// y: 50
+},
+
+{
+	autoAlpha: 1,
+	y: 0,
+	delay: 2.5,
+	duration: 1
+}
+);
+
+// 事業内容ページ
+gsap.fromTo('.js-sub-content',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 2.5,
+		duration: 1
+	}
+	);
+
+// 制作実績一覧ページ
+gsap.fromTo('.js-sub-works',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 2.5,
+		duration: 1
+	}
+	);
+
+// 企業概要ページ
+gsap.fromTo('.js-sub-overview',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 3,
+		duration: 1
+	}
+	);
+
+// ブログ一覧ページ
+gsap.fromTo('.js-sub-blog',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 2.5,
+		duration: 1
+	}
+	);
+
+// ブログ詳細ページ
+gsap.fromTo('.js-single-blog',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 2.5,
+		duration: 1
+	}
+	);
+
+// お問い合わせページ
+gsap.fromTo('.js-sub-contact',
+	{
+		autoAlpha: 0,
+		y: 50
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		delay: 2.5,
+		duration: 1
+	}
+	);

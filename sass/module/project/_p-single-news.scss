@@ -1,3 +1,27 @@
+// アニメーション
+/*画面遷移の後現れるコンテンツ設定*/
+.p-single-news{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .p-single-news{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
 .p-single-news__inner {
 	padding-top: rem(66);
 	overflow: hidden;

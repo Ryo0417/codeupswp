@@ -1,6 +1,15 @@
 <?php get_header(); ?>
+
+<!-- ローディング -->
+<div class="c-splash">
+	<figure class="c-splash__logo">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/CodeUps.svg" alt="ロゴ">
+	</figure>
+</div>
+<div class="c-splash__bg"></div><!---画面遷移用-->
+
 <section class="p-single-blog">
-	<div class="p-single-blog__inner l-inner">
+	<div class="p-single-blog__inner l-inner js-single-blog">
 		<!-- breadcrumb -->
 		<div class="c-breadcrumb firstview">
 			<?php
@@ -10,7 +19,7 @@
 			?>
 		</div>
 	</div><!-- inner -->
-	<div class="p-single-blog__cont">
+	<div class="p-single-blog__cont js-single-blog">
 		<div class="p-single-blog__head">
 			<p class="p-single-blog__title"><?php echo get_field('blog_title'); ?></p>
 		</div>
