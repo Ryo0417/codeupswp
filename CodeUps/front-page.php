@@ -1,12 +1,5 @@
 <?php get_header(); ?>
 
-<div class="c-splash">
-	<figure class="c-splash__logo">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/CodeUps.svg" alt="ロゴ">
-	</figure>
-</div>
-<div class="c-splash__bg"></div><!---画面遷移用-->
-
 <main>
 <!-- スライダーのメインコンテナの div 要素（必須） -->
 	<div class="firstview swiper slider1">
@@ -232,7 +225,7 @@
 			<div class="p-blog__item p-cards js-cards">
 				<?php while ($my_query->have_posts()): $my_query->the_post();$counter++; ?>
 					<?php if ($counter <= 1): ?>
-				<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card p-card--new js-card--<?php echo esc_html($counter) ?>">
+				<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card p-card--new js-card-sp js-card--<?php echo esc_html($counter); ?>">
 					<div class="p-card__img">
 						<img src="<?php echo get_field('blog_image'); ?>" alt="<?php the_title(); ?>" />
 					</div>
@@ -245,9 +238,8 @@
 						<time class="p-card__time" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
 					</div>
 				</a>
-
 	<?php else:?>
-				<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card js-card--<?php echo esc_html($counter) ?>">
+				<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card  js-card-sp js-card--<?php echo esc_html($counter) ?>">
 					<div class="p-card__img">
 						<img src="<?php echo get_field('blog_image'); ?>" alt="<?php the_title(); ?>" />
 					</div>

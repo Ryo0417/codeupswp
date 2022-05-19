@@ -1,26 +1,26 @@
-// アニメーション
-/*画面遷移の後現れるコンテンツ設定*/
-.p-single-blog{
-	opacity: 0;/*はじめは透過0に*/
-}
+// // アニメーション
+// /*画面遷移の後現れるコンテンツ設定*/
+// .p-single-blog{
+// 	opacity: 0;/*はじめは透過0に*/
+// }
 
-/*bodyにappearクラスがついたら出現*/
-body.appear .p-single-blog{
-	animation-name:PageAnimeAppear;
-	animation-duration:1s;
-	animation-delay: 0.8s;
-	animation-fill-mode:forwards;
-	opacity: 0;
-}
+// /*bodyにappearクラスがついたら出現*/
+// body.appear .p-single-blog{
+// 	animation-name:PageAnimeAppear;
+// 	animation-duration:1s;
+// 	animation-delay: 0.8s;
+// 	animation-fill-mode:forwards;
+// 	opacity: 0;
+// }
 
-@keyframes PageAnimeAppear{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
-}
-}
+// @keyframes PageAnimeAppear{
+// 	0% {
+// 	opacity: 0;
+// 	}
+// 	100% {
+// 	opacity: 1;
+// }
+// }
 
 .p-single-blog__inner {
 	padding-top: rem(66);

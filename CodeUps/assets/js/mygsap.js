@@ -5,7 +5,7 @@
 
 // mv
 tl = new TimelineMax();
-tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh',delay: 2.9})
+tl.fromTo('.js-swiper-wrapper', 1, {height: 0}, {height:'100vh'})
 .addLabel('up')
 .staggerFromTo('.slide-content__sentence', 0.3, {x:'1em',y:'1.2em',rotateZ: 180} ,{x: 0, y: 0 ,rotateZ: 0, ease: Power2.easeInOut}, 0.05, 'up+=0.2')
 .fromTo('.slide-content__txt', 1, {opacity:0, y: '100%'}, {opacity: 1, y: '0%'}, 'up+=1.2');
@@ -164,12 +164,13 @@ custom_anime.to('.js-overview-txt-desc', //アニメーションする要素
 	{ duration: 0.8, autoAlpha: 1}
 );
 
-// ブログアニメーション
+// トップブログアニメーション
 ScrollTrigger.matchMedia({
 	"(min-width: 768px)": function() {
-		gsap.fromTo('.p-card', {
-			x : "-109%",
+		gsap.fromTo('.js-card-sp', {
+			x : "-100%",
 			autoAlpha: 0,
+			duration: 1
 			// delay: 0.5,
 		},
 		{
@@ -188,7 +189,7 @@ ScrollTrigger.matchMedia({
 
 	"(max-width: 767px)": function() {
 		gsap.fromTo('.js-card--1', {
-			x: "111%"
+			x: "109%"
 		},
 		{
 			x: 0,
@@ -200,7 +201,7 @@ ScrollTrigger.matchMedia({
 		});
 
 		gsap.fromTo('.js-card--2', {
-			x: "107%",
+			x: "109%",
 		},
 		{
 			x: 0,
@@ -212,7 +213,7 @@ ScrollTrigger.matchMedia({
 		});
 
 		gsap.fromTo('.js-card--3', {
-			x: "107%",
+			x: "109%",
 		},
 		{
 			x: 0,
@@ -235,7 +236,7 @@ gsap.fromTo('.js-sub-news',
 {
 	autoAlpha: 1,
 	y: 0,
-	delay: 2.5,
+	// delay: 2.5,
 	duration: 1
 }
 );
@@ -250,7 +251,7 @@ gsap.fromTo('.js-single-news',
 {
 	autoAlpha: 1,
 	y: 0,
-	delay: 2.5,
+	delay: 0.5,
 	duration: 1
 }
 );
@@ -265,7 +266,7 @@ gsap.fromTo('.js-sub-content',
 	{
 		autoAlpha: 1,
 		y: 0,
-		delay: 2.5,
+		// delay: 2.5,
 		duration: 1
 	}
 	);
@@ -280,7 +281,22 @@ gsap.fromTo('.js-sub-works',
 	{
 		autoAlpha: 1,
 		y: 0,
-		delay: 2.5,
+		// delay: 2.5,
+		duration: 1
+	}
+	);
+
+// 制作実績詳細ページ
+gsap.fromTo('.js-single-works',
+	{
+		autoAlpha: 0,
+		y: 70
+	},
+
+	{
+		autoAlpha: 1,
+		y: 0,
+		// delay: 2.5,
 		duration: 1
 	}
 	);
@@ -295,25 +311,48 @@ gsap.fromTo('.js-sub-overview',
 	{
 		autoAlpha: 1,
 		y: 0,
-		delay: 3,
+		// delay: 3,
 		duration: 1
 	}
 	);
 
 // ブログ一覧ページ
-gsap.fromTo('.js-sub-blog',
-	{
-		autoAlpha: 0,
-		y: 50
+const elems = document.getElementsByClassName('js-card');
+ScrollTrigger.matchMedia({
+	"(min-width: 768px)": function() {
+		gsap.fromTo('.js-sub-blog',
+		{
+			autoAlpha: 0,
+			y: 50
+		},
+	
+		{
+			autoAlpha: 1,
+			y: 0,
+			// delay: 2.5,
+			duration: 1
+		}
+		);
+		
 	},
 
-	{
-		autoAlpha: 1,
-		y: 0,
-		delay: 2.5,
-		duration: 1
+	"(max-width: 767px)": function() {
+		const elems = document.getElementsByClassName('js-card');
+		for (let i = 0; i < elems.length; i++) {
+			gsap.fromTo(elems[i], {
+				x: "111%"
+			},
+			{
+				x: 0,
+				duration: 0.7,
+				scrollTrigger: {
+					trigger: elems[i],
+					start: 'top center'
+				},
+			});
+		}
 	}
-	);
+});
 
 // ブログ詳細ページ
 gsap.fromTo('.js-single-blog',
@@ -325,7 +364,7 @@ gsap.fromTo('.js-single-blog',
 	{
 		autoAlpha: 1,
 		y: 0,
-		delay: 2.5,
+		// delay: 2.5,
 		duration: 1
 	}
 	);
@@ -340,7 +379,7 @@ gsap.fromTo('.js-sub-contact',
 	{
 		autoAlpha: 1,
 		y: 0,
-		delay: 2.5,
+		// delay: 2.5,
 		duration: 1
 	}
 	);
