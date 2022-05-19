@@ -453,77 +453,6 @@ select::-ms-expand {
 
 /*========= ローディング画面のためのCSS ===============*/
 
-.c-splash {
-	background: #333;
-	color: #fff;
-	height: 100%;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	z-index: 9999999;
-}
-
-.c-splash__logo {
-	-webkit-transform: translate(-50%, -50%);
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 7.5rem;
-}
-
-/*========= 画面遷移のためのCSS ===============*/
-
-/*画面遷移アニメーション*/
-
-.c-splash__bg {
-	display: none;
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .c-splash__bg {
-	-webkit-transform: scaleY(0); /*伸びる背景色の設定*/
-	-webkit-animation-name: PageAnime;
-	-webkit-animation-duration: 1.2s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-fill-mode: forwards;
-	animation-duration: 1.2s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnime;
-	animation-timing-function: ease-in-out;
-	background-color: #333;
-	content: "";
-	display: block;
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	transform: scaleY(0);
-	width: 100%;
-	z-index: 9999;
-}
-
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-news {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-news {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
-}
-
 .c-wp-pagenavi {
 	margin-top: 5rem;
 	text-align: center;
@@ -586,23 +515,14 @@ body.appear .p-sub-news {
 
 .l-header {
 	-webkit-transition: background-color 0.3s ease 0s;
-	-webkit-transition: 1.2s;
 	background-color: rgba(17, 17, 17, 0.5);
 	height: 3.125rem;
 	left: 0;
-	opacity: 0;
 	position: fixed;
 	right: 0;
 	top: 0;
 	transition: background-color 0.3s ease 0s;
-	transition: 1.2s;
 	z-index: 9000;
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .l-header {
-	opacity: 1;
 }
 
 .l-inner {
@@ -658,6 +578,7 @@ body.appear .l-header {
 .p-blog__inner {
 	margin: auto;
 	max-width: 31.25rem;
+	overflow: hidden;
 	padding-top: 3.125rem;
 	width: 100%;
 }
@@ -908,26 +829,6 @@ body.appear .l-header {
 	letter-spacing: 0.1em;
 	padding: 0.625rem 0;
 	text-align: center;
-}
-
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-contact {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-contact {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
 }
 
 .p-contact {
@@ -1609,26 +1510,6 @@ body.modal-open {
 	margin-top: 2rem;
 }
 
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-single-blog {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-single-blog {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
-}
-
 .p-single-blog__inner {
 	overflow: hidden;
 	padding-top: 4.125rem;
@@ -1725,26 +1606,6 @@ body.appear .p-single-blog {
 .p-single-blog__pagination a:hover {
 	background-color: #fff;
 	color: #333;
-}
-
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-single-news {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-single-news {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
 }
 
 .p-single-news__inner {
@@ -1951,26 +1812,6 @@ body.appear .p-single-news {
 	width: 100%;
 }
 
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-blog {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-blog {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
-}
-
 .p-sub-blog__inner {
 	max-width: 37.5rem;
 	overflow: hidden;
@@ -2165,26 +2006,6 @@ table.CF7_table {
 	color: #979797;
 }
 
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-content {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-content {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
-}
-
 .p-sub-content__inner {
 	max-width: 37.5rem;
 	overflow: hidden;
@@ -2255,26 +2076,6 @@ body.appear .p-sub-content {
 	margin-top: 1.5rem;
 }
 
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-news {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-news {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
-}
-
 .p-sub-news__top-img {
 	background: url(../img/sub-news/sp-sub-news1.jpg) no-repeat center center/cover;
 	height: 26.5625rem;
@@ -2331,26 +2132,6 @@ body.appear .p-sub-news {
 	font-size: 1rem;
 	line-height: 1.5;
 	margin-top: 1.25rem;
-}
-
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-overview {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-overview {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
 }
 
 .p-sub-overview {
@@ -2505,26 +2286,6 @@ body.appear .p-sub-overview {
 	right: 0.625rem;
 	transform: rotate(45deg);
 	width: 0.9375rem;
-}
-
-/*画面遷移の後現れるコンテンツ設定*/
-
-.p-sub-works {
-	opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにappearクラスがついたら出現*/
-
-body.appear .p-sub-works {
-	-webkit-animation-name: PageAnimeAppear;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0.8s;
-	-webkit-animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-name: PageAnimeAppear;
-	opacity: 0;
 }
 
 .p-sub-works__inner {
@@ -4083,186 +3844,6 @@ html {
 100% {
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
-}
-
-}
-
-@-webkit-keyframes PageAnime {
-
-0% {
-	-webkit-transform-origin: top;
-	-webkit-transform: scaleY(0);
-	transform: scaleY(0);
-	transform-origin: top;
-}
-
-50% {
-	-webkit-transform-origin: top;
-	-webkit-transform: scaleY(1);
-	transform: scaleY(1);
-	transform-origin: top;
-}
-
-50.001% {
-	-webkit-transform-origin: bottom;
-	transform-origin: bottom;
-}
-
-100% {
-	-webkit-transform-origin: bottom;
-	-webkit-transform: scaleY(0);
-	transform: scaleY(0);
-	transform-origin: bottom;
-}
-
-}
-
-@keyframes PageAnime {
-
-0% {
-	-webkit-transform-origin: top;
-	-webkit-transform: scaleY(0);
-	transform: scaleY(0);
-	transform-origin: top;
-}
-
-50% {
-	-webkit-transform-origin: top;
-	-webkit-transform: scaleY(1);
-	transform: scaleY(1);
-	transform-origin: top;
-}
-
-50.001% {
-	-webkit-transform-origin: bottom;
-	transform-origin: bottom;
-}
-
-100% {
-	-webkit-transform-origin: bottom;
-	-webkit-transform: scaleY(0);
-	transform: scaleY(0);
-	transform-origin: bottom;
-}
-
-}
-
-@-webkit-keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes PageAnimeAppear {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
 }
 
 }

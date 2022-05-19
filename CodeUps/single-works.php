@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class="p-single-works">
-	<div class="p-single-works__inner l-inner">
+	<div class="p-single-works__inner l-inner js-single-works">
 		<!-- breadcrumb -->
 		<div class="c-breadcrumb firstview">
 			<?php
@@ -10,18 +10,18 @@
 			?>
 		</div>
 	</div><!-- inner -->
-		<div class="p-single-works__head">
+		<div class="p-single-works__head js-single-works">
 			<p class="p-single-works__company"><?php echo get_field('works_title'); ?><span>制作実績</span></p>
 		</div>
-		<div class="p-single-works__meta">
+		<div class="p-single-works__meta js-single-works">
 			<time class="p-single-works__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
 			<span class="p-single-works__cat"><?php echo esc_html( get_the_terms( get_the_ID(), 'works_genre' )[0]->name ); ?></span>
 		</div>
 
 		<!-- swiper -->
-		<div class="gallery">
+		<div class="gallery js-single-works">
 			<!-- メイン -->
-			<div class="swiper gallery-slider">
+			<div class="swiper gallery-slider js-single-works">
 				<div class="swiper-wrapper sub-swiper-wrapper">
 					<?php $images = get_field( "slider_image" );?>
 					<?php foreach($images as $image) { ?>

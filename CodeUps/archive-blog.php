@@ -1,13 +1,5 @@
 <?php get_header(); ?>
 
-<!-- ローディング -->
-<div class="c-splash">
-	<figure class="c-splash__logo">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/CodeUps.svg" alt="ロゴ">
-	</figure>
-</div>
-<div class="c-splash__bg"></div><!---画面遷移用-->
-
 <section class="p-sub-blog">
 	<h1 class="p-sub-blog__top-img firstview"></h1>
 	<!-- breadcrumb -->
@@ -43,13 +35,14 @@
 <?php if (!is_paged()) : ?>
 
 	<!-- 1ページ目のとき -->
-			<div class="p-blog__item p-cards">
-			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-
+			<div class="p-blog__item p-cards js-cards">
+			<?php if(have_posts()) :
+				// $counter =1;
+				while(have_posts()) : the_post(); ?>
 					<?php if (is_new() || is_home()) { ?><!-- functions.php -->
 
 			<!-- 1件目の記事 -->
-				<a class="p-blog__cont p-card p-card--new" href="<?php the_permalink(); ?>">
+				<a class="p-blog__cont p-card p-card--new js-card" href="<?php the_permalink(); ?>">
 					<div class="p-card__img">
 						<img 
 									src="<?php echo get_field('blog_image'); ?>" 
@@ -69,7 +62,7 @@
 		<?php } else { ?>
 
 			<!-- 2件目以降の記事 -->
-				<a class="p-blog__cont p-card" href="<?php the_permalink(); ?>">
+				<a class="p-blog__cont p-card js-card" href="<?php the_permalink(); ?>">
 					<div class="p-card__img">
 						<img 
 							src="<?php echo get_field('blog_image'); ?>" 

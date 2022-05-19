@@ -1,13 +1,5 @@
 <?php get_header(); ?>
 
-<!-- ローディング -->
-<div class="c-splash">
-	<figure class="c-splash__logo">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/CodeUps.svg" alt="ロゴ">
-	</figure>
-</div>
-<div class="c-splash__bg"></div><!---画面遷移用-->
-
 <section class="p-sub-blog">
 	<h1 class="p-sub-blog__top-img firstview"></h1>
 	<div class="p-sub-blog__inner l-inner js-sub-blog">
@@ -41,9 +33,9 @@
 		</div><!-- /.p-sub-blog__nav -->
 
 		<?php if (have_posts()): ?>
-		<div class="p-blog__item p-blog__item--sub p-cards">
+		<div class="p-blog__item p-blog__item--sub p-cards js-cards">
 			<?php while (have_posts()) : the_post(); ?>
-			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card">
+			<a href="<?php the_permalink(); ?>" class="p-blog__cont p-card js-card">
 				<div class="p-card__img">
 				<img 
 							src="<?php echo get_field('blog_image'); ?>" 
