@@ -10,6 +10,23 @@
   }
 }
 
+@mixin section-title($name) {
+  position: absolute;
+  content: $name;
+  top: rem(-50);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: rem(50);
+  letter-spacing: 0.04em;
+  font-family: $second-font-family;
+  background-image: linear-gradient(-90deg, #1600FF 0%, #A200FF 30%, #FF2465 60%, #FF9400 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0.8;
+  z-index: -1;
+}
+
 // 数値のみを取り出す
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {

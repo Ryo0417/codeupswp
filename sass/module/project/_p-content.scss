@@ -36,15 +36,7 @@
 }
 
 .p-content__head h2::after {
-  position: absolute;
-  content: "Content";
-  top: rem(-50);
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: rem(50);
-  letter-spacing: 0.04em;
-  font-family: $second-font-family;
-  color: rgba($color: $section-title, $alpha: 0.2);
+  @include section-title("Content");
 
   @include mq("md") {
     top: rem(-40);
