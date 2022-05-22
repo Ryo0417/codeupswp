@@ -600,17 +600,23 @@ select::-ms-expand {
 	position: relative;
 }
 
-.p-blog__head::after {
+.p-blog__head h2::after {
 	-webkit-transform: translateX(-50%);
-	color: rgba(249, 248, 113, 0.2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: -webkit-gradient(linear, right top, left top, from(#1600FF), color-stop(30%, #A200FF), color-stop(60%, #FF2465), to(#FF9400));
+	background-image: linear-gradient(-90deg, #1600FF 0%, #A200FF 30%, #FF2465 60%, #FF9400 100%);
+	color: transparent;
 	content: "Blog";
 	font-family: "Noto Serif JP";
 	font-size: 3.125rem;
 	left: 50%;
 	letter-spacing: 0.04em;
+	opacity: 0.8;
 	position: absolute;
 	top: -3.125rem;
 	transform: translateX(-50%);
+	z-index: -1;
 }
 
 .p-blog__head h2 {
@@ -910,15 +916,21 @@ select::-ms-expand {
 
 .p-content__head h2::after {
 	-webkit-transform: translateX(-50%);
-	color: rgba(249, 248, 113, 0.2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: -webkit-gradient(linear, right top, left top, from(#1600FF), color-stop(30%, #A200FF), color-stop(60%, #FF2465), to(#FF9400));
+	background-image: linear-gradient(-90deg, #1600FF 0%, #A200FF 30%, #FF2465 60%, #FF9400 100%);
+	color: transparent;
 	content: "Content";
 	font-family: "Noto Serif JP";
 	font-size: 3.125rem;
 	left: 50%;
 	letter-spacing: 0.04em;
+	opacity: 0.8;
 	position: absolute;
 	top: -3.125rem;
 	transform: translateX(-50%);
+	z-index: -1;
 }
 
 .p-content__maskWrapper {
@@ -1304,17 +1316,23 @@ body.modal-open {
 	width: 100%;
 }
 
-.p-overview__head::after {
+.p-overview__head h2::after {
 	-webkit-transform: translateX(-50%);
-	color: rgba(249, 248, 113, 0.2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: -webkit-gradient(linear, right top, left top, from(#1600FF), color-stop(30%, #A200FF), color-stop(60%, #FF2465), to(#FF9400));
+	background-image: linear-gradient(-90deg, #1600FF 0%, #A200FF 30%, #FF2465 60%, #FF9400 100%);
+	color: transparent;
 	content: "Overview";
 	font-family: "Noto Serif JP";
 	font-size: 3.125rem;
 	left: 50%;
 	letter-spacing: 0.04em;
+	opacity: 0.8;
 	position: absolute;
-	top: -3rem;
+	top: -3.125rem;
 	transform: translateX(-50%);
+	z-index: -1;
 }
 
 .p-overview__head h2 {
@@ -2395,17 +2413,23 @@ table.CF7_table {
 	width: 100%;
 }
 
-.p-works__head::after {
+.p-works__head h2::after {
 	-webkit-transform: translateX(-50%);
-	color: rgba(249, 248, 113, 0.2);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: -webkit-gradient(linear, right top, left top, from(#1600FF), color-stop(30%, #A200FF), color-stop(60%, #FF2465), to(#FF9400));
+	background-image: linear-gradient(-90deg, #1600FF 0%, #A200FF 30%, #FF2465 60%, #FF9400 100%);
+	color: transparent;
 	content: "Works";
 	font-family: "Noto Serif JP";
 	font-size: 3.125rem;
 	left: 50%;
 	letter-spacing: 0.04em;
+	opacity: 0.8;
 	position: absolute;
 	top: -3.125rem;
 	transform: translateX(-50%);
+	z-index: -1;
 }
 
 .p-works__head h2 {
@@ -2729,7 +2753,7 @@ a[href^="tel:"] {
 	margin-top: 0;
 }
 
-.p-blog__head::after {
+.p-blog__head h2::after {
 	-webkit-transform: initial;
 	font-size: 6.875rem;
 	left: initial;
@@ -3192,7 +3216,7 @@ a[href^="tel:"] {
 	width: 100%;
 }
 
-.p-overview__head::after {
+.p-overview__head h2::after {
 	-webkit-transform: initial;
 	font-size: 6.875rem;
 	left: 0;
@@ -3711,7 +3735,7 @@ a[href^="tel:"] {
 	width: 100vw;
 }
 
-.p-works__head::after {
+.p-works__head h2::after {
 	-webkit-transform: initial;
 	font-size: 6.875rem;
 	left: initial;
