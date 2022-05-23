@@ -138,7 +138,7 @@ custom_anime.to('.js-works-txt-title', //アニメーションする要素
 
 /*---3つ目の要素---*/
 custom_anime.to('.js-works-txt-desc', //アニメーションする要素
-	{ duration: 0.5, autoAlpha: 1}
+	{ duration: 1, autoAlpha: 1}
 );
 
 //  企業概要アニメーション
@@ -161,7 +161,7 @@ custom_anime.to('.js-overview-txt-title', //アニメーションする要素
 
 /*---3つ目の要素---*/
 custom_anime.to('.js-overview-txt-desc', //アニメーションする要素
-	{ duration: 0.5, autoAlpha: 1}
+	{ duration: 1, autoAlpha: 1}
 );
 
 // トップブログアニメーション
