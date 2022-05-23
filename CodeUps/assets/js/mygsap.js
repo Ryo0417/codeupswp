@@ -90,7 +90,7 @@ custom_anime.to('.js-blog-maskWrapper span', //アニメーションする要素
 		gsap.to('.js-content-img', {
 			opacity: 1,
 			x: 0,
-			delay: 0.5,
+			// delay: 0.5,
 			scrollTrigger: {
 				trigger: '.js-content',
 				start: 'top center'
@@ -106,7 +106,7 @@ custom_anime.to('.js-blog-maskWrapper span', //アニメーションする要素
 		gsap.to('.js-content-img', {
 			opacity: 1,
 			y: 0,
-			delay: 1,
+			delay: 0.5,
 			scrollTrigger: {
 				trigger: '.js-content',
 				start: 'top bottom'
@@ -128,7 +128,7 @@ var custom_anime = gsap.timeline({
 
 /*---1つ目の要素---*/
 custom_anime.to('.js-works-slide img', //アニメーションする要素
-	{duration: 1, x: "0%"}
+	{duration: 0.5, x: "0%"}
 );
 
 /*---２つ目の要素---*/
@@ -138,7 +138,7 @@ custom_anime.to('.js-works-txt-title', //アニメーションする要素
 
 /*---3つ目の要素---*/
 custom_anime.to('.js-works-txt-desc', //アニメーションする要素
-	{ duration: 0.8, autoAlpha: 1}
+	{ duration: 0.5, autoAlpha: 1}
 );
 
 //  企業概要アニメーション
@@ -151,7 +151,7 @@ var custom_anime = gsap.timeline({
 
 /*---1つ目の要素---*/
 custom_anime.to('.js-overview-img img', //アニメーションする要素
-	{duration: 1, x: "0%"}
+	{duration: 0.5, x: "0%"}
 );
 
 /*---２つ目の要素---*/
@@ -161,7 +161,7 @@ custom_anime.to('.js-overview-txt-title', //アニメーションする要素
 
 /*---3つ目の要素---*/
 custom_anime.to('.js-overview-txt-desc', //アニメーションする要素
-	{ duration: 0.8, autoAlpha: 1}
+	{ duration: 0.5, autoAlpha: 1}
 );
 
 // トップブログアニメーション
@@ -170,7 +170,7 @@ ScrollTrigger.matchMedia({
 		gsap.fromTo('.js-card-sp', {
 			x : "-100%",
 			autoAlpha: 0,
-			duration: 1
+			duration: 0.5,
 			// delay: 0.5,
 		},
 		{
@@ -182,18 +182,18 @@ ScrollTrigger.matchMedia({
 				},
 				stagger: {
 					from: "start", //左からアニメーション start、center、edges、random、endが指定できる
-					amount: 1 //0.1秒ズラしてアニメーション
+					amount: 1.2 //0.1秒ズラしてアニメーション
 				}
 		});
 	},
 
 	"(max-width: 767px)": function() {
 		gsap.fromTo('.js-card--1', {
-			x: "109%"
+			x: "111%"
 		},
 		{
 			x: 0,
-			duration: 0.7,
+			duration: 0.5,
 			scrollTrigger: {
 				trigger: '.js-card--1',
 				start: 'top center'
@@ -205,7 +205,7 @@ ScrollTrigger.matchMedia({
 		},
 		{
 			x: 0,
-			duration: 0.7,
+			duration: 0.5,
 			scrollTrigger: {
 				trigger: '.js-card--2',
 				start: 'top center'
@@ -217,7 +217,7 @@ ScrollTrigger.matchMedia({
 		},
 		{
 			x: 0,
-			duration: 0.7,
+			duration: 0.5,
 			scrollTrigger: {
 				trigger: '.js-card--3',
 				start: 'top center'
